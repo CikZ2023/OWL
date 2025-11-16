@@ -1,7 +1,22 @@
-## <img src="fig/owl.svg" width="40" alt="Owl Logo">     Owl Overview
+## <img src="fig/owl.svg" width="40" alt="Owl Logo"> [AAAI2026]Causally-Grounded Dual-Path Attention Intervention for Object Hallucination Mitigation in LVLMs
 
 ![DPC](fig/565d4f952397b052549817ebab404338.jpg)
+The official repo for Owl,a causally-grounded dual-path attention intervention method for mitigating object hallucination in large vision-language models.
+Full paper can be found at: [https://arxiv.org/pdf/2511.09018](https://arxiv.org/pdf/2511.09018).
 
+<div style='display:flex; gap: 0.25rem; '>
+<a href='https://arxiv.org/pdf/2511.09018'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
+<a href='LICENCE'><img src='https://img.shields.io/badge/License-Apache 2.0-g.svg'></a>
+</div>
+
+## 🗓 To-Do List
+- ✅ Key code for editing attention released
+- ✅ Preprint of the paper released, check it [here](https://arxiv.org/pdf/2511.09018)
+- ⭕ English version of the introduction video: 
+- ⭕ The video talk (Chinese version) is now public
+- ⭕ Full code release (llava with vision)
+
+## Intro
 - We introduce a dual-path contrastive decoding strategy: one path enhances visually grounded predictions, while the other amplifies hallucinations - allowing the model to "let truth shine and hallucination collapse".
 - The new **contrastive probability distribution** for decoding is formulated as:
 
