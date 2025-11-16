@@ -33,3 +33,41 @@ The proposed SCM for hallucination analysis in LVLMs. Visual input ($X_V$) and t
 ![SCM](fig/scm.PNG)
 isualization of dual-path attention intervention.Compared to the original attention, the visual and text favored paths highlight distinct modality preferences in token-level attention.
 ![attention](fig/59e7b5f4b41cd2856d7d94de818b015f.jpg)
+
+## Environment Setup
+```
+cd env
+conda env create -f owl.yml
+conda activate owl.yml
+```
+Or you can simply build the LLaVA-1.5 environment following [PAI](https://lalbj.github.io/projects/PAI/).
+## Run OWL
+### Chair
+
+1. Download POPE bench ([COCO2014](https://huggingface.co/datasets/HuggingFaceM4/COCO) 
+
+2. Download [LLaVA-v1.5-7b](https://huggingface.co/liuhaotian/llava-v1.5-7b)
+
+3. Run the script (with one GPU <default 0>).
+```
+conda activate causalmm_llava
+cd llava-1.5/experiments/scripts
+CUDA_VISIBLE_DEVICES=0 bash llava1.5_eval.bash
+```
+## Citation
+Welcome to star our repo and cite our work:
+```
+@inproceedings{
+  zhou2025mitigating,
+  title={Mitigating Modality Prior-Induced Hallucinations in Multimodal Large Language Models via Deciphering Attention Causality},
+  author={Guanyu Zhou and Yibo Yan and Xin Zou and Kun Wang and Aiwei Liu and Xuming Hu},
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025}
+}
+```
+
+## Acknowledgement
+* [LLaVA](https://github.com/haotian-liu/LLaVA): Large Language and Vision Assistant
+* [Qwen2-VL](https://github.com/QwenLM/Qwen2-VL): Enhancing Vision-Language Model’s Perception of the World at Any Resolution
+* [VCD](https://github.com/DAMO-NLP-SG/VCD): Mitigating Object Hallucinations in Large Vision-Language Models through Visual Contrastive Decoding
+* [OPEAR](https://github.com/shikiw/OPERA?tab=readme-ov-file): Alleviating Hallucination in Multi-Modal Large Language Models via Over-Trust Penalty and Retrospection-Allocation
